@@ -5,6 +5,7 @@ import List from './components/List/List';
 import { getTodos, todos } from './signals';
 import './App.css';
 import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
+import { ITodo } from './types';
 
 export function App() {
 
@@ -12,7 +13,7 @@ export function App() {
 
   const fecthTodos = useCallback(async () => {
     try {
-      todos.value = await getTodos();
+      todos.value = await getTodos() as ITodo[];
       setIsLoading(false);
     } catch (error) {
       console.error(error);
