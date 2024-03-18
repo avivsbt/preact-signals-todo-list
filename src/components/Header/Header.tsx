@@ -11,7 +11,9 @@ const Header: React.FC = () => {
   return (
     <>
       <Stack direction="horizontal" gap={3}>
-        <div class="p-2">Todo List</div>
+        <div class="p-2">
+          <b>Todo List</b>
+        </div>
         <div class="p-2 ms-auto"></div>
         <div class="vr" />
         <div class="p-2">Completed: {completedCount}</div>

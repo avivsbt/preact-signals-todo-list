@@ -34,7 +34,7 @@ const Add: React.FC = () => {
             inputValue.value = '';
           }}
         >
-          Button
+          Add 
         </Button>
       </InputGroup>
     </div>
