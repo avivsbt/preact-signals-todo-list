@@ -22,7 +22,6 @@ const Add: React.FC = () => {
         />
         <Button
           variant="outline-secondary"
-          id="button-addon2"
           onClick={() => {
             let id = Math.max(...todos.value.map((u) => u.id)) + 1;
             todos.value = [

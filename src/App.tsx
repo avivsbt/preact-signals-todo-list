@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import List from './components/List/List';
 import { getTodos, todos } from './signals';
 import './App.css';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 export function App() {
 
@@ -25,27 +26,22 @@ export function App() {
   }, []);
 
   return (
-    <>
-      <section class="vw-100">
-        <div class="container">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col col-xl-10">
-
-              <div class="card">
-                <div class="card-body p-5">
-                  <Header />
-                  <Add />
-                  {!todos.value.length ?
-                    <p>No data found</p>
-                    :
-                    <List />
-                  }
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+    <Container>
+      <Row>
+        <Col>
+          <Card >
+            <Card.Body>
+              <Header />
+              <Add />
+              {!todos.value.length ?
+                <p>No data found</p>
+                :
+                <List />
+              }
+            </Card.Body>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
   );
 }
