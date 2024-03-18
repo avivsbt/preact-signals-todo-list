@@ -6,7 +6,6 @@ import { getTodos, todos } from './signals';
 import './App.css';
 import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 
-
 export function App() {
 
   const [isLoading, setIsLoading] = useState<boolean>(true);
