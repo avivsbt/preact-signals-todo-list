@@ -28,10 +28,10 @@ export function App() {
   }, []);
 
   return (
-    <Container fluid className="d-flex justify-content-center">
+    <Container className="d-flex justify-content-center">
       <Row>
-        <Col>
-          <Card >
+        <Col className="d-flex justify-content-center">
+          <Card>
             <Card.Body>
               <Header />
               <Add />

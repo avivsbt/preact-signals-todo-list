@@ -14,7 +14,7 @@ const Item: React.FC<Props> = ({ todo, index }) => {
 
       <Container className="h-50">
         <Row>
-          <Col sm={8}>
+          <Col sm={9}>
             <div class="pointer text-left d-flex align-items-center"
               onClick={() => {
                 todo.completed = !todo.completed;
@@ -30,7 +30,7 @@ const Item: React.FC<Props> = ({ todo, index }) => {
               </div>
             </div>
           </Col>
-          <Col className="justify-content-end d-flex align-items-center" sm={4}>
+          <Col className="justify-content-start d-flex align-items-center" sm={3}>
             <Button
               onClick={() => {
                 todos.value.splice(index, 1);
