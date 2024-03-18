@@ -11,3 +11,6 @@ export interface ITodo {
   completed: boolean;
   userId: number;
 }
+
+export type IError  = unknown;
+  

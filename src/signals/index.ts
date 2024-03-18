@@ -1,9 +1,9 @@
-import { ITodo, ITodosReqDto } from '../types';
+import { IError, ITodo, ITodosReqDto } from '../types';
 import { signal } from '@preact/signals';
 
 export const todos = signal<ITodo[]>([]);
 
-export async function getTodos(): Promise<ITodosReqDto | any> {
+export async function getTodos(): Promise<ITodosReqDto | IError> {
   try {
     const todoApi = await fetch('https://dummyjson.com/todos?limit=25');
     const response = await todoApi.json();
