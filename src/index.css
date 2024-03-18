@@ -5,7 +5,8 @@ body {
 
 .card {
   border-radius: 15px;
-  width: 500px;
+  width: 900px;
+  min-width: 500px;
 }
 
 .text-left {
