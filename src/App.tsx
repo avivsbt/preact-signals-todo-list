@@ -1,17 +1,20 @@
-import { useCallback, useEffect } from 'preact/hooks';
+import { useCallback, useEffect, useState } from 'preact/hooks';
 import Add from './components/Add/Add';
 import Header from './components/Header/Header';
 import List from './components/List/List';
 import { getTodos, todos } from './signals';
 import './App.css';
-import { Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row, Spinner } from 'react-bootstrap';
+
 
 export function App() {
+
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const fecthTodos = useCallback(async () => {
     try {
       todos.value = await getTodos();
-      console.log(todos);
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
     }
@@ -26,18 +29,15 @@ export function App() {
   }, []);
 
   return (
-    <Container>
+    <Container fluid className="d-flex justify-content-center">
       <Row>
         <Col>
           <Card >
             <Card.Body>
               <Header />
               <Add />
-              {!todos.value.length ?
-                <p>No data found</p>
-                :
-                <List />
-              }
+              {isLoading && <Spinner animation="border" role="status" />}
+              {!todos.value.length && !isLoading ? <p>No data found</p> : <List />}
             </Card.Body>
           </Card>
         </Col>
