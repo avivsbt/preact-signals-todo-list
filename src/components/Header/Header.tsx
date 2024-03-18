@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import Stack from 'react-bootstrap/Stack';
 import { computed } from '@preact/signals';
 import { todos } from '../../signals';
@@ -22,4 +21,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default memo(Header);
+export default Header;

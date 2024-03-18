@@ -47,6 +47,5 @@ export function App() {
         </div>
       </section>
     </>
-
   );
 }

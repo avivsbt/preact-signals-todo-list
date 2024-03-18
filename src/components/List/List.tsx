@@ -1,12 +1,8 @@
-import { memo } from 'react';
 import { ITodo } from '../../types';
 import Item from '../Item/Item';
 import { todos } from '../../signals';
 
 const List: React.FC = () => {
-  
-  console.log('List', todos);
-
   return (
     <>
       <ul class="list-group p-0 m-0">
@@ -18,4 +14,4 @@ const List: React.FC = () => {
   );
 };
 
-export default memo(List);
+export default List;

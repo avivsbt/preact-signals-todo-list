@@ -1,6 +1,4 @@
 import { useSignal } from '@preact/signals';
-import { useState } from 'preact/hooks';
-import { memo } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
@@ -42,4 +40,4 @@ const Add: React.FC = () => {
   );
 };
 
-export default memo(Add);
+export default Add;
