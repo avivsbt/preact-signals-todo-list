@@ -4,7 +4,8 @@ import Item from '../Item/Item';
 import { todos } from '../../signals';
 
 const List: React.FC = () => {
-  console.log('in', todos);
+  
+  console.log('List', todos);
 
   return (
     <>

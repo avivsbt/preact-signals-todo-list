@@ -33,8 +33,9 @@ const Add: React.FC = () => {
             ];
             inputValue.value = '';
           }}
+          disabled={!inputValue.value}
         >
-          Add 
+          Add
         </Button>
       </InputGroup>
     </div>
